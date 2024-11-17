@@ -1,0 +1,114 @@
+-------------------------------------bryly.py
+import math
+
+# Figury płaskie
+def kwadrat(a):
+    pole = a**2
+    obwod = 4 * a
+    return pole, obwod
+
+def prostokat(a, b):
+    pole = a * b
+    obwod = 2 * (a + b)
+    return pole, obwod
+
+def trojkat(a, h):
+    pole = 0.5 * a * h
+    return pole
+
+def trojkat_rownoboczny(a):
+    pole = (math.sqrt(3) / 4) * a**2
+    obwod = 3 * a
+    return pole, obwod
+
+def trojkat_rownoramienny(a, b):
+    pole = (a * math.sqrt(b**2 - (a**2 / 4))) / 2
+    obwod = 2 * b + a
+    return pole, obwod
+
+def kolo(r):
+    pole = math.pi * r**2
+    obwod = 2 * math.pi * r
+    return pole, obwod
+
+def rownoleglobok(a, h):
+    pole = a * h
+    obwod = 2 * (a + h)  
+    return pole, obwod
+
+def trapez(a, b, h, ramie1, ramie2):
+    pole = 0.5 * (a + b) * h
+    obwod = a + b + ramie1 + ramie2
+    return pole, obwod
+
+def romb(a, h):
+    pole = a * h
+    obwod = 4 * a
+    return pole, obwod
+
+#  Figury 3d
+def szescian(krawedz):
+    pc = 6 * krawedz**2
+    v = krawedz**3
+    return pc, v
+
+def prostopadloscian(a, b, c):
+    pc = 2 * (a*b + b*c + c*a)
+    v = a * b * c
+    return pc, v
+
+def graniastoslup(pole_podstawy, wysokosc, obwod_podstawy):
+    pc = 2 * pole_podstawy + obwod_podstawy * wysokosc
+    v = pole_podstawy * wysokosc
+    return pc, v
+
+def ostroslup(pole_podstawy, wysokosc, pole_scian_bocznych):
+    pc = pole_podstawy + pole_scian_bocznych
+    v = (1/3) * pole_podstawy * wysokosc
+    return pc, v
+
+def walec(promien, wysokosc):
+    pc = 2 * math.pi * promien * (promien + wysokosc)
+    v = math.pi * promien**2 * wysokosc
+    return pc, v
+
+def stozek(promien, wysokosc):
+    tworzaca = math.sqrt(promien**2 + wysokosc**2)
+    pc = math.pi * promien * (promien + tworzaca)
+    v = (1/3) * math.pi * promien**2 * wysokosc
+    return pc, v
+
+def kula(promien):
+    pc = 4 * math.pi * promien**2
+    v = (4/3) * math.pi * promien**3
+    return pc, v
+
+-----------------------------------------------main.py
+import bryly
+
+
+print("Program rozpoczol dzialanie ;)")
+while True:
+    inp = input()
+    if inp == "stop":
+        print("Progam zkonczyl dzilanie")
+        break
+    elif inp == "a":
+        a = float(input("a - "))
+        b = float(input("b - "))
+        c = float(input("c - "))
+        print(f"v_porostobloscian = {bryly.v_porostobloscian(a,b,c)}")
+    elif inp == "b":
+        r = float(input("r - "))
+        print(f"{bryly.v_koli(r)}")
+    elif inp == "c":
+        pass
+    elif inp == "d":
+        pass
+    elif inp == "e":
+        pass
+    elif inp == "f":
+        pass
+    else:
+        print("Nie ma takiej komendy")
+        
