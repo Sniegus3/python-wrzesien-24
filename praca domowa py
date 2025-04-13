@@ -1,0 +1,51 @@
+class Osoba():
+   
+    def __init__(self,imie,nazwisko,wiek):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.wiek = wiek
+    def int(self):
+        print(f"imie{self.imie}")
+        print(F"nazwisko{self.nazwisko}")
+
+class Uczen():
+    def __init__(self, imie, nazwisko):
+        super().__init__(imie, nazwisko)
+        print (f"oceny {self.oceny}")
+
+    
+
+    def dodaj_oceny(self ,n):
+        self.oceny.append(n)
+
+
+
+class Nauczyciel (Osoba):
+    def __init__(self, imie, nazwisko, wiek):
+        super().__init__(imie, nazwisko, wiek)
+
+
+    def __init__(self, imie):
+        super().__init__(imie)
+
+
+    def __init__(self, nazwisko):
+        super().__init__(nazwisko)
+
+
+    def __init__(self, wiek):
+        super().__init__(wiek)
+
+
+
+class Wychowawca(Nauczyciel):
+    def __init__(self, imie, nazwisko):
+        super().__init__(imie, nazwisko)
+
+
+
+
+
+
+u = Uczen("XXXX" "mmm")
+u.inf()
