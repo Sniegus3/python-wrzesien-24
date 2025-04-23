@@ -1,0 +1,211 @@
+
+class Osoba:
+    def __init__(self, imie, nazwisko, wiek, plec, oceny, kogo_uczy, czyj_wychowawca,gdzie_sie_uczy,gdzie_pracuje):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.wiek = wiek
+        self.plec = plec
+        self.oceny = oceny
+        self.kogo_uczy = kogo_uczy
+        self.czyj_wychowawca = czyj_wychowawca
+        self.gdzie_sie_uczy = gdzie_sie_uczy
+        self.gdzie_pracuje = gdzie_pracuje
+
+    def __init__(self, imie):
+        super().__init__(imie)
+
+
+    def __init__(self, nazwisko):
+        super().__init__(nazwisko)
+
+
+    def __init__(self, wiek):
+        super().__init__(wiek)
+
+    def __init__(self, plec):
+        super().__init__(plec)
+        
+
+    def wypisz_dane(self):
+        print(f"Imię: {self.imie}")
+        print(f"Nazwisko: {self.nazwisko}")
+        print(f"Wiek: {self.wiek}")
+        print(f"Plec:{self.plec}")
+
+class Uczen(Osoba):
+    def __init__ ( self , imie, nazwisko, wiek, plec , oceny ,gdzie_sie_uczy):
+        super().__init__(imie, nazwisko, wiek, plec, oceny,gdzie_sie_uczy )
+        
+
+    def dodaj_oceny(self ,n):
+        self.oceny.append (n)
+
+
+    def __init__(self, imie):
+        super().__init__(imie)
+
+
+    def __init__(self, nazwisko):
+        super().__init__(nazwisko)
+
+
+    def __init__(self, wiek):
+        super().__init__(wiek)
+
+
+    def __init__(self, plec):
+        super().__init__(plec)
+
+    def wypisz_dane(self):
+        print(f"Imię: {self.imie}")
+        print(f"Nazwisko: {self.nazwisko}")
+        print(f"Wiek: {self.wiek}")
+        print(f"Plec:{self.plec}")
+        print(f"Plec:{self.oceny}")
+        print(f"Plec:{self.oceny}")
+  
+
+class Nauczyciel (Osoba):
+    def __init__(self, imie, nazwisko, wiek, kogo_uczy, czyj_wychowawca,gdzie_pracuje):
+        super().__init__(imie, nazwisko, wiek, kogo_uczy, czyj_wychowawca,gdzie_pracuje)
+
+
+    def __init__(self, imie):
+        super().__init__(imie)
+
+
+    def __init__(self, nazwisko):
+        super().__init__(nazwisko)
+
+
+    def __init__(self, wiek):
+        super().__init__(wiek)
+
+    def __init__(self, plec):
+        super().__init__(plec)
+
+
+    def __init__(self, kogo_uczy):
+        super().__init__(kogo_uczy)
+        
+
+    def __init__(self, gdzie_pracuje):
+        super().__init__(gdzie_pracuje)
+
+
+    
+
+    def wypisz_dane(self):
+        print(f"Imię: {self.imie}")
+        print(f"Nazwisko: {self.nazwisko}")
+        print(f"Wiek: {self.wiek}")
+        print(f"Plec:{self.plec}")
+        print(f"Plec:{self.kogo_uczy}")
+        print(f"Plec:{self.gdzie_pracuje}")
+
+
+class Wychowawca(Nauczyciel):
+    def __init__(self, imie, nazwisko, kogo_uczy, czyj_wychowawca,gdzie_pracuje):
+        super().__init__(imie, nazwisko, kogo_uczy, czyj_wychowawca,gdzie_pracuje)
+
+    def __init__(self, imie):
+        super().__init__(imie)
+
+
+    def __init__(self, nazwisko):
+        super().__init__(nazwisko)
+
+
+    def __init__(self, plec):
+        super().__init__(plec)
+
+
+    def __init__(self, wiek):
+        super().__init__(wiek)
+
+
+    def __init__(self, kogo_uczy):
+        super().__init__(kogo_uczy)
+
+    def __init__(self, gdzie_pracuje):
+        super().__init__(gdzie_pracuje)
+
+
+    def __init__(self, czyj_wychowawca):
+        super().__init__(czyj_wychowawca)
+
+    def wypisz_dane(self):
+        print(f"Imię: {self.imie}")
+        print(f"Nazwisko: {self.nazwisko}")
+        print(f"Wiek: {self.wiek}")
+        print(f"Plec:{self.plec}")
+        print(f"Plec:{self.kogo_uczy}")
+        print(f"Plec:{self.czyj_wychowawca}")
+        print(f"Plec:{self.gdzie_pracuje}")
+
+
+class Wozny(Osoba):
+    def __init__ ( self , imie, nazwisko, wiek, plec , gdzie_pracuje ):
+        super().__init__(imie, nazwisko, wiek, plec, gdzie_pracuje )
+
+
+    def __init__(self, imie):
+        super().__init__(imie)
+
+
+    def __init__(self, nazwisko):
+        super().__init__(nazwisko)
+
+
+    def __init__(self, wiek):
+        super().__init__(wiek)
+        
+    
+    def __init__(self, gdzie_pracuje):
+        super().__init__(gdzie_pracuje)
+
+
+    def __init__(self, plec):
+        super().__init__(plec)
+
+
+    def wypisz_dane(self):
+        print(f"Imię: {self.imie}")
+        print(f"Nazwisko: {self.nazwisko}")
+        print(f"Wiek: {self.wiek}")
+        print(f"Plec:{self.plec}")
+        print(f"Plec:{self.gdzie_pracuje}")
+
+
+class Sprzataczka(Wozny):
+    def __init__ ( self , imie, nazwisko, wiek, plec , gdzie_pracuje ):
+        super().__init__(imie, nazwisko, wiek, plec, gdzie_pracuje )
+
+
+    def __init__(self, imie):
+        super().__init__(imie)
+
+
+    def __init__(self, nazwisko):
+        super().__init__(nazwisko)
+
+
+    def __init__(self, wiek):
+        super().__init__(wiek)
+        
+    
+    def __init__(self, gdzie_pracuje):
+        super().__init__(gdzie_pracuje)
+
+
+    def __init__(self, plec):
+        super().__init__(plec)
+
+
+    def wypisz_dane(self):
+        print(f"Imię: {self.imie}")
+        print(f"Nazwisko: {self.nazwisko}")
+        print(f"Wiek: {self.wiek}")
+        print(f"Plec:{self.plec}")
+        print(f"Plec:{self.gdzie_pracuje}")
+
